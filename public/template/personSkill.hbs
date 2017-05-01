@@ -1,0 +1,256 @@
+<div ng-controller="personSkillController as Ctrl" class="personSkillContent">
+
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div class="echartStyleone"></div>
+        <div id="main" class="echartStyle">
+
+        </div>
+
+
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var labelTop = {
+            normal : {
+                label : {
+                    show : true,
+                    position : 'center',
+                    formatter : '{b}',
+                    textStyle: {
+                        baseline : 'bottom'
+                    }
+                },
+                labelLine : {
+                    show : false
+                }
+            }
+        };
+        var labelFromatter = {
+            normal : {
+                label : {
+                    formatter : function (params){
+                        return 100 - params.value + '%'
+                    },
+                    textStyle: {
+                        baseline : 'top'
+                    }
+                }
+            }
+        };
+        var labelBottom = {
+            normal : {
+                color: '#ffffff',   /*空白的颜色*/
+                label : {
+                    show : true,
+                    position : 'center'
+                },
+                labelLine : {
+                    show : false
+                }
+            },
+            emphasis: {
+                color: 'rgba(0,0,0,0)'
+            }
+        };
+        var radius = [40, 55];
+        option = {
+            legend: {
+                x : 'center',
+                y : 'center',
+                data:[
+                    'HTML5','CSS3','JavaScript','Jquery','Bootstrap',
+                    'NodeJs', 'AngularJs', 'Git(github)', 'Java', 'Mysql'
+                ]
+            },
+            title : {
+                text: '基本技能',
+                x: 'center'
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    dataView : {show: true, readOnly: false},
+                    magicType : {
+                        show: true,
+                        type: ['pie', 'funnel'],
+                        option: {
+                            funnel: {
+                                width: '20%',
+                                height: '30%',
+                                itemStyle : {
+                                    normal : {
+                                        label : {
+                                            formatter : function (params){
+                                                return 'other\n' + params.value + '%\n'
+                                            },
+                                            textStyle: {
+                                                baseline : 'middle'
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            series : [
+                {
+                    type : 'pie',
+                    center : ['10%', '30%'],
+                    radius : radius,
+                    x: '0%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:20, itemStyle : labelBottom},
+                        {name:'HTML5', value:80,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['30%', '30%'],
+                    radius : radius,
+                    x:'20%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:20, itemStyle : labelBottom},
+                        {name:'CSS3', value:80,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['50%', '30%'],
+                    radius : radius,
+                    x:'40%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:30, itemStyle : labelBottom},
+                        {name:'JavaScript', value:70,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['70%', '30%'],
+                    radius : radius,
+                    x:'60%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:25, itemStyle : labelBottom},
+                        {name:'Jquery', value:75,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['90%', '30%'],
+                    radius : radius,
+                    x:'80%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:30, itemStyle : labelBottom},
+                        {name:'Bootstrap', value:70,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['10%', '70%'],
+                    radius : radius,
+                    y: '55%',   // for funnel
+                    x: '0%',    // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:40, itemStyle : labelBottom},
+                        {name:'NodeJs', value:60,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['30%', '70%'],
+                    radius : radius,
+                    y: '55%',   // for funnel
+                    x:'20%',    // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:40, itemStyle : labelBottom},
+                        {name:'AngularJs', value:60,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['50%', '70%'],
+                    radius : radius,
+                    y: '55%',   // for funnel
+                    x:'40%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:60, itemStyle : labelBottom},
+                        {name:'Git(github)', value:40,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['70%', '70%'],
+                    radius : radius,
+                    y: '55%',   // for funnel
+                    x:'60%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:70, itemStyle : labelBottom},
+                        {name:'Java', value:30,itemStyle : labelTop}
+                    ]
+                },
+                {
+                    type : 'pie',
+                    center : ['90%', '70%'],
+                    radius : radius,
+                    y: '55%',   // for funnel
+                    x:'80%', // for funnel
+                    itemStyle : labelFromatter,
+                    data : [
+                        {name:'other', value:20, itemStyle : labelBottom},
+                        {name:'Mysql', value:80,itemStyle : labelTop}
+                    ]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+
+
+</div>
+
+
+
+<script>
+    //阻止事件
+    function zuzhi(e){
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }
+        else{
+            e.cancelBubble=true;
+        }
+    }
+
+    //响应式下拉菜单js
+    document.getElementById("dropdownImg").onclick=function(e){
+        zuzhi(e);
+        document.getElementById("dropdownMenu").style.display="block";
+        document.getElementsByClassName("echartStyleone")[0].style.marginTop="220px";
+        document.getElementsByClassName("echartStyleone")[0].style.transform="rotateY(720deg)";
+        document.getElementsByClassName("echartStyle")[0].style.marginTop="220px";
+        document.getElementsByClassName("echartStyle")[0].style.transform="rotateY(720deg)";
+    };
+    window.onclick=function(){
+        document.getElementById("dropdownMenu").style.display="none";
+        document.getElementsByClassName("echartStyleone")[0].style.marginTop="120px";
+        document.getElementsByClassName("echartStyleone")[0].style.transform="rotateY(0deg)";
+        document.getElementsByClassName("echartStyle")[0].style.marginTop="120px";
+        document.getElementsByClassName("echartStyle")[0].style.transform="rotateY(0deg)";
+    }
+</script>

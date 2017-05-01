@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/javascript/angularIndex.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/javascript/demoContent.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/javascript/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/javascript/whiteDemo.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/demo.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/demoContent.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/media/indexMedia.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/personData.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/personEvaluate.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/personProject.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/personSkill.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/stylesheets/whiteDemo.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/demoContent.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/personData.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/personEvaluate.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/personProject.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/personSkill.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/template/sendMail.hbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/routes/routes.js" charset="UTF-8" />
+  </component>
+</project>

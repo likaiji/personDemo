@@ -1,0 +1,40 @@
+/*大的div*/
+.personProjectContent{
+    width:100%;
+    height:730px;
+    background:url("../images/bg-04.jpg") no-repeat center;
+}
+/*项目大的div*/
+.projectBox{
+    width:70%;
+    height:500px;
+    /*background-color: red;*/
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:70px;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+.projectDemo{
+    width:30%;
+    height:200px;
+    margin-top: 20px;
+    margin-left: 28px;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+.projectDemo:hover{
+    background-color: #EEEEEF;
+}
+.projectDemo img{
+    display:block;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}

@@ -1,0 +1,38 @@
+<div ng-controller="personProjectController as Ctrl" class="personProjectContent">
+
+    <!--项目大的div-->
+    <div class="projectBox">
+        <div class="projectDemo"  ng-repeat="personProjectData in Ctrl.data track by $index">
+            <a href="/demoContent?data={{personProjectData.dataUrl}}" target="_block">
+                <img src="{{personProjectData.img}}" height="90%" width="90%" alt="ershizhuanzhuan"/>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    //阻止事件
+    function zuzhi(e){
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }
+        else{
+            e.cancelBubble=true;
+        }
+    }
+
+    //响应式下拉菜单js
+    document.getElementById("dropdownImg").onclick=function(e){
+        zuzhi(e);
+        document.getElementById("dropdownMenu").style.display="block";
+        document.getElementsByClassName("projectBox")[0].style.marginTop="180px";
+        document.getElementsByClassName("projectBox")[0].style.transform="rotateY(720deg)";
+    };
+    window.onclick=function(){
+        document.getElementById("dropdownMenu").style.display="none";
+        document.getElementsByClassName("projectBox")[0].style.marginTop="80px";
+        document.getElementsByClassName("projectBox")[0].style.transform="rotateY(0deg)";
+    }
+</script>

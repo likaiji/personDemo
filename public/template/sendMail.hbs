@@ -1,0 +1,59 @@
+<div ng-controller="sendMailController as Ctrl" class="sendMail">
+
+    <!--发邮件div-->
+    <div class="sendMailBox">
+        <p class="sendMailTitle">留下您的宝贵意见吧！！！！！</p>
+        <div class="sendMailText">
+            <form class="form-horizontal" role="form" name="submitForm" action="/getAdvide" method="post">
+                <!--第一行-->
+                <div class="form-group">
+                    <lable for="email" class="col-sm-3 control-label notice">请输入您的邮箱：</lable>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" ng-model="email" required id="email" name="email" placeholder="您的邮箱">
+                    </div>
+                </div>
+
+                <!--第二行-->
+                <div class="form-group">
+                    <lable for="advice" class="col-sm-3 control-label notice">请输入您的反馈信息：</lable>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="advice" required ng-minlength="5"  ng-model="advice"
+                                  placeholder="请输入你的反馈信息" rows="5" name="advice"></textarea>
+                    </div>
+                </div>
+
+                <!--发送行-->
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-3">
+                        <button type="submit" ng-disabled="submitForm.$invalid" class="btn btn-default btncss">发&nbsp;&nbsp;送</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    //阻止事件
+    function zuzhi(e){
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }
+        else{
+            e.cancelBubble=true;
+        }
+    }
+
+    //响应式下拉菜单js
+    document.getElementById("dropdownImg").onclick=function(e){
+        zuzhi(e);
+        document.getElementById("dropdownMenu").style.display="block";
+        document.getElementsByClassName("sendMailBox")[0].style.transform="rotateY(720deg)";
+    };
+    window.onclick=function(){
+        document.getElementById("dropdownMenu").style.display="none";
+        document.getElementsByClassName("sendMailBox")[0].style.transform="rotateY(0deg)";
+    }
+</script>

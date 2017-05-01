@@ -1,0 +1,27 @@
+@media screen and (max-width: 1000px){
+    /*响应式下拉菜单*/
+    .dropdown{
+        width:50%;
+        height:200px;
+        margin: auto;
+        position: absolute;
+        left:0;
+        right:0;
+        top:100px;
+        bottom: 0;
+        cursor: pointer;
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .footer{
+        width:70%;
+        height:20px;
+        position: absolute;
+        margin: auto;
+        left:0;
+        right: 0;
+        bottom: 30px;
+    }
+}

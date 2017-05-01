@@ -1,0 +1,43 @@
+@media screen and (max-width: 1000px){
+    .personDataBox{
+        width:100%;
+        height:800px;
+        background:url("../../images/bg-01.jpg") no-repeat center;
+    }
+    table{
+        display: inline-block;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    .myData{
+        width:100%;
+        height:500px;
+        margin-top: 120px;
+        background-color: white;
+        opacity: 0.7;
+        position: absolute;
+    }
+    .myDataBox{
+        width:100%;
+        height:500px;
+        margin-top: 120px;
+        position: relative;
+    }
+    td>span{
+        display: inline-block;
+        width:100%;
+    }
+    #tdone{
+        font-size: 12px;
+        font-weight: bold;
+        word-break:break-all;
+    }
+    #tdtwo{
+        display: inline-block;
+        width:100%;
+        word-break:break-all;
+    }
+    .footer{
+        display: none;
+    }
+}

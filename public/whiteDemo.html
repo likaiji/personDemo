@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta name="fragment" content="!"/>
+    <title>做一个优秀的前端工程师</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="stylesheets/reset.css"/>
+    <link rel="stylesheet" href="vendor/Summernote/dist/summernote.css"/>
+    <link rel="stylesheet" href="stylesheets/whiteDemo.css"/>  <!--写项目部分-->
+    <link rel="stylesheet" href="stylesheets/media/indexMedia.css"/> <!--媒体查询-->
+</head>
+<body>
+
+<!--主体部分-->
+<div class="content">
+    <!--导航栏-->
+    <div class="navbarBox">
+
+        <div class="navbar">
+            <a href="/#!/personData">
+                <div class="navbarContent">
+                    <div class="navbarBack"></div>
+                    <div class="navbarWord"><p id="personData">个人资料</p></div>
+                </div>
+            </a>
+
+            <a href="/#!/personEvaluate">
+                <div class="navbarContent">
+                    <div class="navbarBack"></div>
+                    <div class="navbarWord"><p >工作经历</p></div>
+                </div>
+            </a>
+
+            <a href="/#!/personSkill">
+                <div class="navbarContent">
+                    <div class="navbarBack"></div>
+                    <div class="navbarWord"><p>基本技能</p></div>
+                </div>
+            </a>
+
+            <a href="/#!/personProject">
+                <div class="navbarContent">
+                    <div class="navbarBack"></div>
+                    <div class="navbarWord"><p>项目简介</p></div>
+                </div>
+            </a>
+
+            <a href="/#!/sendMail">
+                <div class="navbarContent">
+                    <div class="navbarBack"></div>
+                    <div class="navbarWord"><p>发邮件</p></div>
+                </div>
+            </a>
+        </div>
+
+        <!--响应式下拉菜单-->
+        <div class="dropdown">
+            <img id="dropdownImg" src="images/drop.png" width="15%" height="15%" alt="dropDown"/>
+            <div class="dropdownMenu" id="dropdownMenu">
+                <ul>
+                    <li><a href="/#!/personData">个人资料</a></li>
+                    <li><a href="/#!/personEvaluate">个人评价</a></li>
+                    <li><a href="/#!/personSkill">基本技能</a></li>
+                    <li><a href="/#!/personProject">项目简介</a></li>
+                    <li><a href="/#!/sendMail">发邮件</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--写项目部分-->
+    <div class="writeDemoBox">
+        <div class="writeDemo">
+
+            <!--标题-->
+            <div class="writeDemoTitle"><span class="biaoti">标题：</span><input type="text" name="demoTitle" id="demoTitle"/></div>
+
+            <!--编辑框-->
+            <div id="summernote"></div>
+
+            <!--按钮部分-->
+            <p>
+                <button id="sub" class="btn btn-primary" style="width:200px;font-size:16px">
+                    发&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;表</button>
+            </p>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <p>Copyright &copy; 2017 李开吉</p>
+    </div>
+</div>
+
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/Summernote/dist/summernote.min.js"></script>  <!--summernote的初始js-->
+<script src="javascript/whiteDemo.js"></script>   <!--写文章js-->
+<script>
+    //响应式下拉菜单js
+    var aaa=0;
+    document.getElementById("dropdownImg").onclick=function(){
+        if(aaa==0){
+            document.getElementById("dropdownMenu").style.display="block";
+            aaa=1;
+        }else{
+            document.getElementById("dropdownMenu").style.display="none";
+            aaa=0;
+        }
+    }
+</script>  <!--响应式下拉菜单-->
+</body>
+</html>

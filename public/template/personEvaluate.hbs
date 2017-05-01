@@ -1,0 +1,69 @@
+﻿<div ng-controller="personEvaluateController as Ctrl">
+    <!--工作部分-->
+    <div class="personEvaluateContent">
+
+        <!--工作经历详情部分-->
+        <div class="personEvaluateBox">
+            <!--第一个工作经历-->
+            <div class="personEvaluateBoxOne"></div>
+            <div class="personEvaluateBoxDoubleOne">
+                <p id="companyname">重庆移视互动传媒科技有限公司（大二兼职）</p>
+                <p><span id="title">时间：</span>2015年06月14------2016年05月24</p>
+                <p><span id="title">主要工作项目：</span><p>
+                <div id="wordContent">
+                    <ul>
+                        <li>主要运用传统的Html5,css3，angular路由负责子公司官网的制作，维护;</li>
+                        <li>主要根据UI设计团队的设计要求，完成web 页面的静态模块的基本布局和动态模块的效果;</li>
+                        <li>运用JS框架和Jquery框架以及CSS3实现动画效果；</li>
+                        <li>主要使用Ajax与后台人员完成业务开发；</li>
+                        <li>运用Bootstrap进行页面的自适应和响应式开发，解决主流浏览器的兼容问题；</li>
+                        <li>运用angularjs等主流框架完成数据页面的前后端分离，解决部分数据验证以及与后台人员的交流沟通。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--第二个工作经历-->
+            <div class="personEvaluateBoxTwo"></div>
+            <div class="personEvaluateBoxDoubleTwo">
+
+                <p id="companyname">成都源晟科技有限公司</p>
+                <p><span id="title">时间：</span>2016年06月-至今</p>
+                <p><span id="title">主要工作项目：</span><p>
+                <div id="wordContent">
+                    <ul>
+                        <li>主要负责公司外包项目的制作，以及对现有的网站进行维护，优化，以及模块的整合;</li>
+                        <li>主要以DIV+CSS布局整合静态页面，运用js框架和其他的一些主流框架实现动画效果，适当时引入Bootstrap减少样式设计；</li>
+                        <li>负责解通过angularjs等框架完成数据页面的前后端分离，解决部分数据验证并与后端配合，完成页面的整体功能；</li>
+                        <li>运用node后台，完成页面的服务器配置，以及运用node的一些 模块进行页面的开发，完成公司的外包项目的制作和研发。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    //阻止事件
+    function zuzhi(e){
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }
+        else{
+            e.cancelBubble=true;
+        }
+    }
+
+    //响应式下拉菜单js
+    document.getElementById("dropdownImg").onclick=function(e){
+        zuzhi(e);
+        document.getElementById("dropdownMenu").style.display="block";
+        document.getElementsByClassName("personEvaluateBox")[0].style.marginTop="220px";
+        document.getElementsByClassName("personEvaluateBox")[0].style.transform="rotateY(360deg)";
+    };
+    window.onclick=function(){
+        document.getElementById("dropdownMenu").style.display="none";
+        document.getElementsByClassName("personEvaluateBox")[0].style.marginTop="120px";
+        document.getElementsByClassName("personEvaluateBox")[0].style.transform="rotateY(0deg)";
+    }
+</script>

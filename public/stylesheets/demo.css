@@ -1,0 +1,277 @@
+/*开始导航栏*/
+.navStart{
+    width:100%;
+    height:730px;
+    position: absolute;
+    z-index: 10;
+}
+/*左边部分*/
+.navStartLeft{
+    width:50%;
+    height:100%;
+    background-color: #222222;
+    float: left;
+    animation: moveLeft 1s linear;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+@keyframes moveLeft {
+    0%{
+        transform: translateX(0);
+        width:50%;
+        height:100%;
+    }
+    50%{
+        transform: translateX(-50%);
+        width:25%;
+        height:100%;
+    }
+    100%{
+        transform: translateX(-100%);
+        width:0;
+        height:100%;
+        display: none;
+    }
+}
+/*右边部分*/
+.navStartRight{
+    width:50%;
+    height:100%;
+    background-color: #222222;
+    float: right;
+    transition: all 1s ease-in 2s;   /*给全部参数设置移动 属性一改变就会有这个移动效果*/
+    animation: moveRight 1s linear;
+    animation-delay:2s;
+    animation-fill-mode:forwards;
+}
+@keyframes moveRight {
+    0%{
+        transform: translateX(0);
+        width:50%;
+        height:100%;
+    }
+    50%{
+        transform: translateX(50%);
+        width:25%;
+        height:100%;
+    }
+    100%{
+        transform: translateX(100%);
+        width:0;
+        height:100%;
+        display: none;
+    }
+}
+/*进度条的部分*/
+.loadBox {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.loading{
+    width:100%;
+    height:30px;
+}
+.loading p{
+    font-size: 16px;
+    text-align: center;
+    color:#9C9C9C;
+}
+.loadBar{
+    width:300px;
+    height:20px;
+    background-color: #C5C5C5;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.loadBarCome{
+    width:0;
+    height:100%;
+    background-color: #87D752;
+    animation:loadingmove 2s linear;
+    animation-delay: 0s;
+    animation-fill-mode:forwards;
+}
+@keyframes loadingmove {
+    0% {
+        width:0;
+        height:100%;
+    }
+    50%{
+        width:50%;
+        height:100%;
+    }
+    100%{
+        width:100%;
+        height:100%;
+    }
+}
+
+/*主体部分*/
+.content{
+    width:100%;
+    height:700px;
+    /*background-color: red;*/
+    position: absolute;
+    z-index: 8;
+}
+/*导航栏*/
+.navbarBox{
+    width:100%;
+    height:120px;
+    position: absolute;
+}
+.navbar{
+    width:70%;
+    height:75%;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+/*第一张导航栏*/
+.navbarContent{
+    width:160px;
+    margin-left: 20px;
+    height:100%;
+    float: left;
+    cursor: pointer;
+}
+.navbarContent:hover .navbarBack{
+    background-color: #E0E2E5;
+}
+.navbarContent:hover .navbarWord p{
+    color:#5394D6;
+}
+.navbarBack{
+    width:160px;
+    height:100%;
+    background-color: #C4C8CD;
+    opacity: 0.4;
+    position: absolute;
+}
+.navbarWord{
+    width:160px;
+    height:100%;
+    position: relative;
+}
+@font-face{
+    font-family: ruiFont;
+    src:url("../font/foneRui.ttf");
+}
+.navbarWord p{
+    font-size: 20px;
+    color:black;
+    text-align: center;
+    padding-top: 30px;
+    font-family: ruiFont;
+}
+/*响应式下拉菜单*/
+.dropdown{
+    width:50%;
+    height:200px;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:100px;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+}
+.dropdown img{
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+}
+/*下拉列表菜单*/
+.dropdownMenu{
+    width:100%;
+    margin-top: 30px;
+    height:160px;   /*#EBECEE*/
+    background-color: #EBECEE;
+    display: none;
+}
+.dropdownMenu ul li a{
+    font-family: ruiFont;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.dropdownMenu ul li{
+    padding-top: 5px;
+    text-align: center;
+    width:100%;
+    height:30px;
+    margin-top: 2px;
+}
+.dropdownMenu ul li:hover{
+    background-color: #FFFFFF;
+}
+
+/*主体部分*/
+.navContent{
+    width:100%;
+    height:100%;
+    /*background-color: pink;*/
+}
+
+
+/*底部*/
+.footer{
+    width:20%;
+    height:20px;
+    position: absolute;
+    margin: auto;
+    right: 10px;
+    bottom: 30px;
+}
+.footer p{
+    font-size: 14px;
+    color:white;
+}
+
+/*页面转换的样式*/
+.pagemove{ }
+@keyframes myfadeIn {
+    from{
+        opacity: 0;
+        transform: scale(0);  /*scale(0)表示0坐标*/
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes myfadeOut {
+    from{
+        opacity: 0;
+        transform: scale(1);  /*scale(0)表示1坐标*/
+    }
+    to{
+        opacity: 0;
+        transform: scale(0);  /*scale(0)表示0坐标*/
+    }
+}
+
+.pagemove.ng-enter{
+    animation: myfadeIn 0.6s ease-in;
+}
+.pagemove.ng-leave{
+    animation: myfadeOut 00s ease-in;
+}

@@ -1,0 +1,45 @@
+/*大的div*/
+.sendMail{
+    width:100%;
+    height:730px;
+    background: url("../images/bg-05.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/*发邮件div*/
+.sendMailBox{
+    width:70%;
+    height:300px;
+    /*background-color: red;*/
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:100px;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+.sendMailBox>p{
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 10px;
+    color:white;
+    font-weight: bold;
+}
+.sendMailText{
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    width:70%;
+    height:200px;
+    margin-top: 20px;
+}
+/*label提示信息*/
+.notice{
+    font-size: 16px;
+    color:white;
+}
+.btncss{
+    width:100px;
+}

@@ -1,0 +1,41 @@
+<div ng-controller="demoContentController as Ctrl" class="demoContent">
+        <!--装项目详情盒子的div-->
+    <div class="demoContentBox">
+        <div class="demoContentTitle" id="demoContentTitle">
+
+        </div>
+        <div class="demoContentContent" id="demoContentContent">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //阻止事件
+    function zuzhi(e){
+        if(e.stopPropagation){
+            e.stopPropagation();
+        }
+        else{
+            e.cancelBubble=true;
+        }
+    }
+
+    //响应式下拉菜单js
+    document.getElementById("dropdownImg").onclick=function(e){
+        zuzhi(e);
+        document.getElementById("dropdownMenu").style.display="block";
+        /*首页样式*/
+        document.getElementsByClassName("demoContentBox")[0].style.marginTop="180px";
+        document.getElementsByClassName("demoContentBox")[0].style.transform="rotateY(360deg)";
+    };
+    window.onclick=function(){
+        document.getElementById("dropdownMenu").style.display="none";
+        /*首页样式*/
+        document.getElementsByClassName("demoContentBox")[0].style.marginTop="80px";
+        document.getElementsByClassName("demoContentBox")[0].style.transform="rotateY(0deg)";
+    };
+
+
+</script>

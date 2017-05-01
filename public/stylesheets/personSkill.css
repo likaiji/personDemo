@@ -1,0 +1,31 @@
+/*大的div*/
+.personSkillContent{
+    width:100%;
+    height:730px;
+    background:url("../images/bg-03.jpg") no-repeat center;
+}
+/*echarts的大div*/
+.echartStyleone{
+    width:70%;
+    height:450px;
+    background-color: #c6c6c6;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    opacity: 0.9;
+    transition: all 0.5s ease-in-out;
+}
+.echartStyle{
+    width:70%;
+    height:400px;
+    margin: auto;
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}

@@ -1,0 +1,75 @@
+/*大的div*/
+.personEvaluateContent{
+    width:100%;
+    height:730px;
+    background:url("../images/bg-02.jpg") no-repeat center;
+    /*position: relative;*/
+}
+
+/*个人经历详情部分*/
+.personEvaluateBox{
+    width:70%;
+    height:400px;
+    position: absolute;
+    margin: auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+/*第一个工作经历*/
+.personEvaluateBoxOne{
+    width:48%;
+    height:450px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.7;
+}
+.personEvaluateBoxDoubleOne{
+    width:45%;
+    height:450px;
+    position: relative;
+}
+.personEvaluateBoxDoubleOne p{
+    padding-left: 50px;
+    line-height: 30px;
+}
+.personEvaluateBoxDoubleOne>p:nth-child(1){
+    padding-top:50px;
+}
+#companyname{
+    font-size: 16px;
+    font-weight: bold;
+}
+#title{
+    font-weight: bold;
+}
+#wordContent{
+    padding-left: 50px;
+    line-height: 30px;
+}
+/*第二个工作经历*/
+.personEvaluateBoxTwo{
+    width:48%;
+    height:450px;
+    background-color: white;
+    margin-top: -450px;
+    position: absolute;
+    margin-left: 50%;
+    opacity: 0.7;
+}
+.personEvaluateBoxDoubleTwo{
+    width:45%;
+    height:450px;
+    margin-top: -450px;
+    position: relative;
+    margin-left: 50%;
+}
+.personEvaluateBoxDoubleTwo p{
+    padding-left: 50px;
+    line-height: 30px;
+}
+.personEvaluateBoxDoubleTwo>p:nth-child(1){
+    padding-top:50px;
+}
